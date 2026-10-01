@@ -1,6 +1,6 @@
 :root{
   --pine:#15271e; --char:#22281f; --cream:#f7f2e9; --sand:#ece2cf;
-  --brass:#b3873f; --ink:#20241e; --muted:#6b6f63;
+  --brass:#805b24; --gold:#e5bd7a; --ink:#20241e; --muted:#6b6f63;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -15,17 +15,17 @@ a{color:inherit}
 .brand{font-size:1.35rem;text-decoration:none;letter-spacing:.02em}
 .nav nav a{margin-left:22px;text-decoration:none;font-size:.92rem;opacity:.85}
 .nav nav a:hover{opacity:1;color:var(--sand)}
-.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;background-size:cover;background-position:center;color:#fff}
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;background:var(--pine);color:#fff}
 .hero-page{min-height:52vh}
 .hero-soon{background:linear-gradient(135deg,#1c2f24,#3a4a35)}
-.hero-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,18,13,.82) 0%,rgba(10,18,13,.25) 55%,rgba(10,18,13,.15) 100%)}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,18,13,.90) 0%,rgba(10,18,13,.72) 55%,rgba(10,18,13,.15) 100%)}
 .hero-copy{position:relative;padding:90px 24px 70px}
 .hero-copy h1{font-size:clamp(2.4rem,6vw,4.2rem);max-width:14ch;margin-bottom:14px}
 .lede{font-size:1.15rem;max-width:52ch;opacity:.92}
 .price-big{font-family:'Fraunces',Georgia,serif;font-size:2rem;margin-top:18px;color:var(--sand)}
 .btn{display:inline-block;margin-top:26px;padding:14px 30px;background:var(--brass);color:#fff;text-decoration:none;
   font-weight:600;border-radius:3px;letter-spacing:.02em}
-.btn:hover{background:#9c7434}
+.btn:hover{background:#68471a}
 .strip{background:var(--pine);color:#e9e2d2}
 .strip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding:56px 24px}
 .strip h3{font-size:1.25rem;margin-bottom:8px;color:#fff}
@@ -38,7 +38,7 @@ section.wrap h2{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:18px}
 .card{display:block;background:#fff;border-radius:6px;overflow:hidden;text-decoration:none;
   box-shadow:0 6px 28px rgba(20,30,20,.10);transition:transform .2s}
 .card:hover{transform:translateY(-4px)}
-.card-img{height:260px;background-size:cover;background-position:center}
+.card-img{display:block;width:100%;height:260px;object-fit:cover;object-position:center}
 .card-img-soon{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#22352a,#43563f);color:#cfd6c4;font-style:italic}
 .card-body{padding:26px}
 .badge{display:inline-block;background:var(--pine);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.12em;
@@ -53,7 +53,8 @@ section.wrap h2{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:18px}
   box-shadow:0 3px 14px rgba(20,30,20,.07)}
 .spec-grid span{display:block;font-family:'Fraunces',Georgia,serif;font-size:1.6rem;color:var(--ink);margin-bottom:2px}
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:36px 0 8px}
-.gallery img{width:100%;height:340px;object-fit:cover;border-radius:6px;display:block}
+.gallery{align-items:start}
+.gallery img{width:100%;height:auto;border-radius:6px;display:block}
 .fine{font-size:.8rem;color:var(--muted);margin:10px 0 40px}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:8px 40px;margin-top:8px}
 .two-col ul{list-style:none}
@@ -76,5 +77,16 @@ footer .fine{padding:0 24px 32px}
   .strip-grid,.cards,.two-col,.foot-grid{grid-template-columns:1fr}
   .spec-grid{grid-template-columns:repeat(3,1fr)}
   .gallery{grid-template-columns:1fr}
-  .gallery img{height:260px}
 }
+
+/* Accessible navigation, readable color pairs, and small-screen contact layout. */
+.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero .kicker,.contact .kicker{color:var(--gold)}
+.rendering-note{font-size:.8rem;color:#fff;margin-bottom:12px}
+.contact .fine,footer .fine{color:#b9bfae}
+.contact-big{font-size:clamp(1.1rem,5vw,1.5rem);overflow-wrap:anywhere}
+a:focus-visible{outline:3px solid currentColor;outline-offset:5px}
+.skip-link{position:fixed;left:16px;top:8px;z-index:100;background:var(--cream);color:var(--ink);padding:12px 18px;transform:translateY(-150%)}
+.skip-link:focus{transform:translateY(0)}
+[id]{scroll-margin-top:90px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}

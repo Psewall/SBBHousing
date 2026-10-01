@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>https://sbbhousing.com/</loc><image:image><image:loc>https://sbbhousing.com/assets/img/hero.jpg</image:loc></image:image></url>
+  <url><loc>https://sbbhousing.com/projects/604-woodlands.html</loc>
+    <image:image><image:loc>https://sbbhousing.com/assets/img/hero.jpg</image:loc></image:image>
+    <image:image><image:loc>https://sbbhousing.com/assets/img/great-room.jpg</image:loc></image:image>
+    <image:image><image:loc>https://sbbhousing.com/assets/img/kitchen.jpg</image:loc></image:image>
+    <image:image><image:loc>https://sbbhousing.com/assets/img/entry.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://sbbhousing.com/projects/3917-hillcrest.html</loc></url>
+</urlset>
